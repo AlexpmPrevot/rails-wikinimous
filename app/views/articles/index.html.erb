@@ -1,0 +1,8 @@
+<% @articles.each do |article| %>
+  <ul class="list-group my-3">
+  <li class="list-group-item p-1">
+    <%= link_to article.title, article_path(article), :class => "fs-3 fw-semibold text-decoration-none text-dark" %>
+    <p><%= article.content.first(100)... %></p>
+  </li>
+  <% end %>
+  </ul>
